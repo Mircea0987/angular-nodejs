@@ -1,0 +1,49 @@
+{{ productform.value | json }}
+
+<form
+  class="example-form"
+  [formGroup]="productform"
+  (ngSubmit)="submitProductForm()"
+>
+  <div>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Product Id</mat-label>
+      <input matInput formControlName="idProducts" placeholder="Product Id" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Product Name</mat-label>
+      <input
+        matInput
+        formControlName="ProductsName"
+        placeholder="Product name"
+      />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Product Price</mat-label>
+      <input
+        matInput
+        formControlName="ProductsPrice"
+        placeholder="Product Price"
+      />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Product Image</mat-label>
+      <input
+        matInput
+        formControlName="ProductsImage"
+        placeholder="Product Image (url)"
+      />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Products Description</mat-label>
+      <input
+        matInput
+        formControlName="ProductsDescription"
+        placeholder="Products Description"
+      />
+    </mat-form-field>
+  </div>
+  <div>
+    <button class="btn-priamry">Submit!</button>
+  </div>
+</form>

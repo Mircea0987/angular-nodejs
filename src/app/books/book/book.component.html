@@ -1,4 +1,4 @@
-<div class="card" style="width: 18rem">
+<div class="card" style="width: 18rem" *ngIf="book">
   <img
     src="{{ book.ProductsImage }}"
     class="card-img-top"
@@ -6,8 +6,8 @@
   />
   <div class="card-body" class="text-center">
     <h5 class="card-title">{{ book.ProductsName }}</h5>
-    <p class="card-text">{{ book.ProductsDescription }}.</p>
-    <small class="small">{{ book.ProductsPrice }}</small>
+    <p class="card-text">{{ book.ProductsDescription }}</p>
+    <small class="small">{{ book.ProductsPrice | currency : "RON" }}</small>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>

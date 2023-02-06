@@ -12,4 +12,7 @@ export class HttpService {
   get(): Observable<Book[]> {
     return this.http.get<Book[]>('http://localhost:5000/api/data');
   }
+  post(data) {
+    return this.http.post('http://localhost:5000/api/data/post', data);
+  }
 }
